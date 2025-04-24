@@ -10,8 +10,8 @@
 <div align="center">
   <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
     <!-- <img src="public/images/screenshots/auth-screen.png" alt="Authentication Screen" width="250"/> -->
-    <img src="public/images/screenshots/workout-tracking.png" alt="Workout Tracking" width="250"/>
-    <img src="public/images/screenshots/progress-chart.png" alt="Progress Chart" width="250"/>
+    <img src="public/images/workout-tracking.png" alt="Workout Tracking" width="250"/>
+    <img src="public/images/progress-chart.png" alt="Progress Chart" width="250"/>
   </div>
 </div>
 
