@@ -161,6 +161,7 @@ export default function WorkoutTracker() {
             {/* Main Content */}
             <main className="flex-1 container max-w-md mx-auto px-4 py-6">
                 <Tabs defaultValue="workout" className="w-full">
+
                     <TabsList className="grid grid-cols-3 mb-6">
                         <TabsTrigger value="workout">Current Workout</TabsTrigger>
                         <TabsTrigger value="progress">Progress</TabsTrigger>
@@ -171,10 +172,10 @@ export default function WorkoutTracker() {
                         <div className="flex justify-between items-center">
                             <h2 className="text-xl font-bold">Workout</h2>
                             <div className="flex gap-2">
-                                <Button variant="outline" size="sm">
+                                <Button variant="primary" size="sm">
                                     Discard
                                 </Button>
-                                <Button variant="default" size="sm">
+                                <Button variant="inverse" size="sm">
                                     Save
                                 </Button>
                             </div>
@@ -305,8 +306,8 @@ export default function WorkoutTracker() {
                                             {/* Complete Button */}
                                             <div className="flex items-end justify-center">
                                                 <Button
-                                                    variant={set.completed ? "default" : "outline"}
-                                                    className={`w-full ${set.completed ? "bg-emerald-500 hover:bg-emerald-600" : ""}`}
+                                                    variant="primary"
+                                                    className="w-full"
                                                     onClick={() => toggleComplete(set.id)}
                                                 >
                                                     {set.completed ? "Done" : "Complete"}
@@ -320,7 +321,7 @@ export default function WorkoutTracker() {
 
                         {/* Add Set Button */}
                         <div className="flex justify-center">
-                            <Button variant="outline" onClick={addSet} className="flex items-center gap-2">
+                            <Button variant="primary" onClick={addSet} className="flex items-center gap-2">
                                 <Plus className="h-4 w-4" />
                                 Add Set
                             </Button>
