@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FitBuddy - Workout Tracking App
 
-## Getting Started
+<div align="center">
+  <img src="public/images/fitbuddy-logo.png" alt="FitBuddy Logo" width="200"/>
+  <h3>Track your workouts. Achieve your goals.</h3>
+</div>
 
-First, run the development server:
+## 📱 Screenshots
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<div align="center">
+  <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+    <!-- <img src="public/images/screenshots/auth-screen.png" alt="Authentication Screen" width="250"/> -->
+    <img src="public/images/screenshots/workout-tracking.png" alt="Workout Tracking" width="250"/>
+    <img src="public/images/screenshots/progress-chart.png" alt="Progress Chart" width="250"/>
+  </div>
+</div>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **User Authentication** - Sign up, sign in, and guest mode
+- **Workout Tracking** - Log sets, reps, and weights for each exercise
+- **Progress Visualization** - Track your improvement with interactive charts
+- **Exercise Library** - Choose from common exercises or add your own
+- **Dark/Light Mode** - Choose your preferred theme
+- **Responsive Design** - Works on mobile, tablet, and desktop
+- **Offline Support** - Track workouts even without internet connection
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Getting Started
 
-## Learn More
+### Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+- Node.js 18.0.0 or later
+- npm or yarn
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/fitbuddy.git
+   cd fitbuddy
