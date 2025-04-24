@@ -6,6 +6,8 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { Eye, EyeOff, Loader2 } from "lucide-react"
+import { signInWithEmailAndPassword } from "firebase/auth"
+import { auth } from "@/utils/firebase"
 
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
@@ -31,23 +33,23 @@ export default function SignInForm() {
         },
     })
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
+    async function onSubmit(values: z.infer<typeof formSchema>) {
         setIsLoading(true)
-
-        // Simulate API call
-        setTimeout(() => {
-            setIsLoading(false)
-
-            // For demo purposes, accept any valid form input
-            localStorage.setItem("fitbuddy-user", JSON.stringify({ email: values.email }))
-
+        try {
+            const userCredential = await signInWithEmailAndPassword(auth, values.email, values.password)
+            const user = userCredential.user
+            localStorage.setItem("fitbuddy-user", JSON.stringify({ email: user.email, uid: user.uid }))
             // toast({
             //     title: "Sign in successful",
             //     description: "Welcome back to FitBuddy!",
             // })
-
             router.push("/dashboard")
-        }, 1500)
+        } catch (error: any) {
+            // Optionally, show a toast or set an error state
+            alert(error.message || "Failed to sign in. Please check your credentials.")
+        } finally {
+            setIsLoading(false)
+        }
     }
 
     return (
